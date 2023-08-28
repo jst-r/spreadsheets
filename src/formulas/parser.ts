@@ -6,5 +6,6 @@ const formulaParser = grammar(formulaGrammarSource);
 
 console.log(formulaParser.match('42').succeeded())
 console.log(formulaParser.match('1 + 2').succeeded())
+console.log(formulaParser.match('1 * 2').succeeded())
 
 export { };

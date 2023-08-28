@@ -1,3 +1,6 @@
 Formula {
-    Exp = "42"
+	Exp =   Exp "+" number  -- plus
+    	|   Exp "-" number  -- minus
+        |   number
+	number = digit+
 }

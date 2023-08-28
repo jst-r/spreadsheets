@@ -25,7 +25,7 @@ export default function Home() {
               {(val, j) => (
                 <input
                   type="number"
-                  class="bg-gray-100 p-2 hover:bg-slate-200 transition-colors"
+                  class="bg-gray-100 p-2 hover:bg-slate-200 transition-colors [appearance:textfield]"
                   value={val()}
                   onChange={(n) =>
                     setCells(i, j, n.currentTarget.valueAsNumber)

@@ -1,6 +1,14 @@
 Formula {
-	Exp =   Exp "+" number  -- plus
-    	|   Exp "-" number  -- minus
-        |   number
+	Exp = AddExp
+	
+	AddExp = AddExp "+" MulExp  -- plus
+    	|    AddExp "-" MulExp  -- minus
+        |    MulExp
+
+	MulExp = MulExp "*" number	-- multiply
+		|	 MulExp "/" number	-- divide
+		|	 number
+
+	
 	number = digit+
 }

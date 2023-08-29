@@ -19,6 +19,9 @@ semantics.addOperation("eval", {
     MulExp_divide(a, _, b) {
         return a.eval() / b.eval();
     },
+    Parens_parens(_1, a, _2) {
+        return a.eval()
+    },
     number(digits) {
         return Number.parseFloat(digits.sourceString);
     }

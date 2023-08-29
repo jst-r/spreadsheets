@@ -5,10 +5,12 @@ Formula {
     	|    AddExp "-" MulExp  -- minus
         |    MulExp
 
-	MulExp = MulExp "*" number	-- multiply
-		|	 MulExp "/" number	-- divide
-		|	 number
+	MulExp = MulExp "*" Parens	-- multiply
+		|	 MulExp "/" Parens	-- divide
+		|	 Parens
 
+	Parens = "(" Exp ")" -- parens
+		|	 number
 	
 	number = digit+
 }

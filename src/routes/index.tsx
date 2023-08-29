@@ -3,7 +3,7 @@ import { createStore } from "solid-js/store";
 import { A } from "solid-start";
 import Counter from "~/components/Counter";
 
-import "../formulas/parser";
+import "../formulas/formula";
 
 export default function Home() {
   const [cells, setCells] = createStore<number[][]>(

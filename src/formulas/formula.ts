@@ -24,15 +24,6 @@ semantics.addOperation("eval", {
     }
 })
 
-function evaluate(source: string) {
+export function evaluate(source: string) {
     return semantics(formulaGrammar.match(source)).eval()
 }
-
-console.log(evaluate("42"));
-console.log(evaluate("1 + 2"));
-console.log(evaluate("1 + 2 - 3 + 4"));
-console.log(evaluate("1 + 2 * 3"));
-console.log(evaluate("1 + 2 * 3 / 4"));
-
-
-export { };
